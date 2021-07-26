@@ -1,9 +1,10 @@
 const colors = require('colors');
-const { showMenu } = require('./helpers/messages');
+const { showMenu, pause } = require('./helpers/messages');
 console.clear();
 
 const main = () => {
     showMenu();
+    //pause();
 }
 
 main();
