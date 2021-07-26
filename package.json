@@ -1,6 +1,6 @@
 {
   "name": "app-listar-tareas-node",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nicoder10/app-listar-tareas-node#readme",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "inquirer": "^8.1.2"
   }
 }
