@@ -1,0 +1,22 @@
+{
+  "name": "app-listar-tareas-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoder10/app-listar-tareas-node.git"
+  },
+  "author": "Nicolas Martino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoder10/app-listar-tareas-node/issues"
+  },
+  "homepage": "https://github.com/nicoder10/app-listar-tareas-node#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
