@@ -1,13 +1,15 @@
 const Task = require('./task');
 
 class Tasks {
-    list = '';
+    _list = '';
 
     constructor() {
-        this.list = {}
+        this._list = {}
+    }
+    createTask(desc) {
+        const task = new Task(desc);
+        this._list[task.id] = task;
     }
 }
 
-module.exports = {
-    Tasks
-}
+module.exports = Tasks;
