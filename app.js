@@ -2,6 +2,7 @@ const colors = require('colors');
 // const { showMenu, pause } = require('./helpers/messages');
 const { showInquirerMenu, inquirerPause, readInput } = require('./helpers/inquirer');
 const Tasks = require('./models/tasks');
+const { storeInDB } = require('./helpers/storeFile');
 console.clear();
 
 const main = async() => {
@@ -15,6 +16,7 @@ const main = async() => {
             case '1':
                 const desc = await readInput('Description: ');
                 tasks.createTask(desc);
+                storeInDB(JSON.stringify(tasks.listArray));
                 break;
             case '2':
                 //console.log(tasks._list);
