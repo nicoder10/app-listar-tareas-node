@@ -9,6 +9,10 @@ const main = async() => {
     let userOpt = '';
     const tasks = new Tasks();
 
+    // load tasks from file
+    const dbTasks = readFromDB();
+    if(dbTasks) tasks.loadTasksfromArray(dbTasks); 
+
     do {
         const { option } = await showInquirerMenu();
         userOpt = option;
@@ -19,7 +23,8 @@ const main = async() => {
                 storeInDB(JSON.stringify(tasks.listArray));
                 break;
             case '2':
-                console.log(readFromDB());
+                //console.log(readFromDB());
+                tasks.completeList();
                 break;
         }
         await inquirerPause();
