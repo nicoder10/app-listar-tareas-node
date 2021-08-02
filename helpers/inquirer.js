@@ -11,7 +11,7 @@ const showInquirerMenu = async () => {
                         { value: '1', name: `${'1'.cyan} Create task` }, 
                         { value: '2', name: `${'2'.cyan} List tasks` },
                         { value: '3', name: `${'3'.cyan} List completed tasks` }, 
-                        { value: '4', name: `${'4'.cyan} List pending tasks)` },
+                        { value: '4', name: `${'4'.cyan} List pending tasks` },
                         { value: '5', name: `${'5'.cyan} Complete task(s)`}, 
                         { value: '6', name: `${'6'.cyan} Delete task`}, 
                         { value: '7', name: `${'0'.red} Exit\n` },
