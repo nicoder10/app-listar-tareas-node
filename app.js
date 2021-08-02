@@ -23,8 +23,13 @@ const main = async() => {
                 storeInDB(JSON.stringify(tasks.listArray));
                 break;
             case '2':
-                //console.log(readFromDB());
                 tasks.completeList();
+                break;
+            case '3':
+                tasks.listPendingCompleted(true);
+                break;
+            case '4':
+                tasks.listPendingCompleted(false);
                 break;
         }
         await inquirerPause();
