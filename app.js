@@ -1,6 +1,6 @@
 const colors = require('colors');
 // const { showMenu, pause } = require('./helpers/messages');
-const { showInquirerMenu, inquirerPause, readInput } = require('./helpers/inquirer');
+const { showInquirerMenu, inquirerPause, readInput, deleteTaskList, confirm } = require('./helpers/inquirer');
 const Tasks = require('./models/tasks');
 const { storeInDB, readFromDB } = require('./helpers/storeFile');
 console.clear();
@@ -31,6 +31,16 @@ const main = async() => {
             case '4':
                 tasks.listPendingCompleted(false);
                 break;
+            /*
+            case '5':
+                break;
+            */
+           case '6':
+               const id = await deleteTaskList(tasks.listArray)
+               const ok = await confirm('Are you sure you want to delete?')
+               if(ok) tasks.deleteTask(id)
+               else storeInDB(tasks.listArray)
+               break;
         }
         await inquirerPause();
     } while(userOpt !== '0')
