@@ -39,6 +39,23 @@ class Tasks {
         });
     }
 
+    toggleCompleted(ids){
+        ids.forEach((id) => {
+            const task = this._listado[id]
+            if( !task.completedEn ){
+                task.completedEn = new Date().toISOString()
+            }
+        });
+
+        this.listArray.forEach((task) => {
+            const { id } = task;
+            if (!ids.includes(id)) {
+                this._list[id].completedIn = null
+            }
+        });
+    }
+
+
     deleteTask(id) {
         if(this._list[id]) {
             delete this._list[id]
